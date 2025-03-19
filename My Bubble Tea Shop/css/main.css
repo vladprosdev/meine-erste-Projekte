@@ -1,0 +1,59 @@
+html {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    color: #472d1e;
+    background-color: rgb(255, 240, 222);
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+hr {
+    border: 1px solid #472d1e;
+}
+
+a {
+    color: #4d2f1e;
+}
+
+a:visited {
+    color: #000000;
+}
+
+a:hover {
+    color: #c7a408;
+}
+
+fieldset {
+    border: 1px solid #472d1e;
+}
+
+input {
+    background-color: rgb(255, 240, 222);
+    border: 1px solid #472d1e;
+}
+
+textarea {
+    background-color: rgb(255, 240, 222);
+    border: 1px solid #472d1e;
+}
+
+button {
+    background-color: rgb(255, 240, 222);
+    border: 1px solid #472d1e;
+}
+
+th,
+td,
+caption {
+    border: 1px solid #2e124e;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: separate;
+    padding: 0.5rem;
+}
