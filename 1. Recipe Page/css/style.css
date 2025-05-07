@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+/* || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* || UTILITY CLASSES */
+.font-weight-700 {
+    font-weight: var(--FONT-WEIGHT-700);
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/* || COLORS */
+:root {
+    --WHITE: white;
+
+    --STONE-100: hsl(30, 54%, 90%);
+    --STONE-150: hsl(30, 18%, 87%);
+    --STONE-600: hsl(30, 10%, 34%);
+    --BORDER-COLOR: hsl(30, 10%, 34%, 0.2);
+    --STONE-900: hsl(24, 5%, 18%);
+
+    --BROWN-800: hsl(14, 45%, 36%);
+
+    --ROSE-800: hsl(332, 51%, 32%);
+    --ROSE-50: hsl(330, 100%, 98%);
+}
+
+/* || FONT WEIGHTS */
+:root {
+    --FONT-WEIGHT-400: 400;
+    --FONT-WEIGHT-600: 600;
+    --FONT-WEIGHT-700: 700;
+}
+
+/* || SKELET */
+body {
+    min-width: 365px;
+    font-family: "Outfit", sans-serif;
+    line-height: 1.4;
+    min-height: 100dvh;
+    background-color: var(--STONE-100);
+    color: var(--STONE-600);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div.container {
+    max-width: min(100%, 768px);
+    border-radius: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    background-color: var(--WHITE);
+}
+
+div.content {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    padding: 0 2rem;
+    background-color: var(--WHITE);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--BORDER-COLOR);
+}
+
+/* .attribution {
+    margin-bottom: 2rem;
+} */
+
+/* || TYPOGRAPHY */
+h1,
+h2 {
+    font-family: "Young Serif", sans-serif;
+    font-weight: var(--FONT-WEIGHT-400);
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: var(--STONE-900);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--BROWN-800);
+}
+
+.preparation-time h3 {
+    color: var(--ROSE-800);
+}
+
+/* || OMELETTE */
+.omelette-image img {
+    width: 100%;
+}
+
+.omelette {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
+/* || LISTS */
+.preparation-time {
+    background: var(--ROSE-50);
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+}
+
+ol,
+ul {
+    list-style-position: outside;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1rem 1rem 0;
+    gap: 0.7rem;
+    margin-left: 0.5rem;
+}
+
+li {
+    padding-left: 1rem;
+}
+
+.preparation-time ul li::marker {
+    color: var(--ROSE-800);
+}
+
+.ingredients ul li::marker {
+    color: var(--BROWN-800);
+}
+
+.instructions ol li::marker {
+    color: var(--BROWN-800);
+    font-weight: var(--FONT-WEIGHT-700);
+}
+
+ul li::marker {
+    font-size: 0.8rem;
+    vertical-align: middle;
+}
+
+/* || NUTRITION TABLE */
+.nutrition {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.nutrition h2 {
+    margin-bottom: 0.5rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 20px 0 10px;
+    border-bottom: 1px solid var(--BORDER-COLOR);
+}
+
+th {
+    max-width: min-content;
+    text-align: left;
+    font-weight: normal;
+    padding-left: 1.5rem;
+}
+
+td {
+    max-width: 50%;
+    color: var(--BROWN-800);
+    font-weight: var(--FONT-WEIGHT-700);
+}
+
+/* || MEDIA QUERY XS, SMALL */
+@media screen and (max-width: 768px) {
+    li {
+        padding-left: 0.5rem;
+    }
+}
+
+/* || MEDIA QUERY MEDIUM */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    li {
+        padding-left: 1rem;
+    }
+
+    .omelette-image {
+        border-radius: 20px;
+    }
+
+    div.content {
+        padding: 0;
+    }
+
+    div.container {
+        border-radius: 20px;
+        margin: 4rem auto;
+        padding: 2rem;
+    }
+}
