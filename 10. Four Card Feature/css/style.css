@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+/* || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+/* || VARIABLES */
+:root {
+    /* COLORS */
+    --RED: hsl(0, 78%, 62%);
+    --CYAN: hsl(180, 62%, 55%);
+    --ORANGE: hsl(34, 97%, 64%);
+    --BLUE: hsl(212, 86%, 64%);
+
+    --GRAY-500: hsl(234, 12%, 34%);
+    --GRAY-400: hsl(212, 6%, 44%);
+    --WHITE: hsl(0, 0%, 100%);
+
+    /* FONT */
+    --FF: "Poppins", sans-serif;
+    --FS-BODY: 15px;
+    --FW-200: 200;
+    --FW-400: 400;
+    --FW-600: 600;
+}
+
+/* UTILITY CLASSES */
+.cyan {
+    background-color: var(--CYAN);
+}
+
+.red {
+    background-color: var(--RED);
+}
+
+.orange {
+    background-color: var(--ORANGE);
+}
+
+.blue {
+    background-color: var(--BLUE);
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+body {
+    color: var(--GRAY-500);
+    background: hsla(212, 6%, 44%, 0.04);
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: var(--FS-BODY);
+}
+
+.content-container {
+    max-width: 400px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 2rem;
+}
+
+/* TEXT */
+.text-container {
+    max-width: 500px;
+    text-align: center;
+}
+
+h2:nth-child(1) {
+    font-weight: var(--FW-200);
+}
+
+h2:nth-child(2) {
+    font-weight: var(--FW-600);
+}
+
+.text-container p {
+    margin-top: 1rem;
+}
+
+/* CARDS */
+.cards-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 8px 25px -10px var(--GRAY-400);
+    background: var(--WHITE);
+    overflow: hidden;
+}
+
+.cards-center {
+    max-width: fit-content;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.top-border {
+    width: 100%;
+    height: 4px;
+}
+
+.text-box {
+    min-width: 150px;
+    max-width: 250px;
+}
+
+.text-icon-container {
+    width: fit-content;
+    padding: 2rem;
+    display: flex;
+    flex-flow: column;
+    gap: 2.5rem;
+}
+
+h3 {
+    font-weight: var(--FW-600);
+}
+
+.card p {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+.cards-container img {
+    width: 4rem;
+    height: 4rem;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 670px) and (max-width: 1024px) {
+    .content-container {
+        max-width: 100%;
+    }
+
+    .card {
+        width: fit-content;
+        max-height: 240px;
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #supervisor {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #calculator {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .cards-center {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .content-container {
+        max-width: 100%;
+    }
+
+    .cards-container {
+        flex-flow: row;
+    }
+
+    .cards-center {
+        display: flex;
+        flex-flow: column;
+        gap: 2rem;
+    }
+}
