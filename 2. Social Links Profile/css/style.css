@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+/* || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+/* || UTILITY CLASSES */
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+/* || COLORS */
+:root {
+    --GREEN: hsl(75, 94%, 57%);
+    --WHITE: hsl(0, 0%, 100%);
+    --GREY-700: hsl(0, 0%, 20%);
+    --GREY-800: hsl(0, 0%, 12%);
+    --GREY-900: hsl(0, 0%, 8%);
+}
+
+html {
+    font: 14px "Inter", sans-serif;
+}
+
+/* || SKELET */
+body {
+    min-height: 100dvh;
+    background-color: var(--GREY-900);
+    color: var(--WHITE);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* || BEFORE BUTTONS */
+.card {
+    width: clamp(200px, calc(100% - 3.5rem), 370px);
+    height: max-content;
+    background-color: var(--GREY-800);
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.5rem;
+}
+
+.Sofiia {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.circle-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.circle-container img {
+    width: 250%;
+    height: 250%;
+    position: relative;
+    right: 103px;
+    bottom: 53px;
+    object-fit: cover;
+}
+
+.location {
+    color: var(--GREEN);
+}
+
+/* || BUTTONS */
+.button-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
+.social-button {
+    color: var(--WHITE);
+    background-color: var(--GREY-700);
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: color 0.2s ease-in, background-color 0.2s ease, transform 0.2s ease-in;
+}
+
+.social-button:hover {
+    background-color: var(--GREEN);
+    color: var(--GREY-800);
+    transform: scale(1.02);
+    cursor: pointer;
+}

@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+/* || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* || VARIABLES  */
+:root {
+    /* COLORS */
+    --SOFT-BLUE: hsla(215, 51%, 70%, 0.9);
+    --CYAN: hsl(178, 100%, 50%);
+    --MAIN-BG: hsl(217, 54%, 11%);
+    --CARD-BG: hsl(216, 50%, 16%);
+    --LINE: hsl(215, 32%, 27%);
+    --WHITE: hsl(0, 0%, 100%);
+
+    /* FONT */
+    --FF: "Outfit", sans-serif;
+    --FS-PARAGRAPH: 18px;
+    --FW-300: 300;
+    --FW-200: 200;
+    --FW-500: 500;
+    --FW-600: 600;
+}
+
+/* || UTILITY CLASSES */
+.no-wrap {
+    white-space: nowrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    min-height: 100dvh;
+    font-family: var(--FF);
+    background-color: var(--MAIN-BG);
+    color: var(--WHITE);
+    margin: 2rem;
+}
+
+/* || CARD */
+.card {
+    width: minmax(360px, 400px);
+    max-width: 400px;
+    background-color: var(--CARD-BG);
+    border-radius: 20px;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+/* || IMAGE */
+.image-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* || TEXT */
+.text-container {
+    gap: 1rem;
+}
+
+h2 {
+    font-weight: var(--FW-500);
+}
+
+p {
+    color: var(--SOFT-BLUE);
+    font-size: var(--FS-PARAGRAPH);
+    font-weight: var(--FW-200);
+}
+
+/* || PRICE AND TIME */
+.price-and-time-container {
+    justify-content: space-between;
+}
+
+.price-container,
+.time-container {
+    font-size: 0.9rem;
+    gap: 7px;
+}
+
+h3 {
+    font-weight: var(--FW-400);
+    color: var(--SOFT-BLUE);
+}
+
+.price-container h3 {
+    color: var(--CYAN);
+}
+
+/* || HR */
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--LINE);
+}
+
+/* || AVATAR */
+.profile-container {
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.avatar-container {
+    width: 2rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid var(--WHITE)
+}
+
+h4 {
+    color: var(--SOFT-BLUE);
+    font-weight: var(--FW-300);
+}
+
+.creators-name {
+    color: var(--WHITE);
+}
+
+/* || HOVER STATE IMAGE */
+.image-container img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.image-container .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.image-container:hover .hover-overlay {
+    opacity: 1;
+}
+
+.eye-icon {
+    width: 45px;
+}
+
+/* || HOVER STATE TITLE */
+.text-container h2 {
+    width: fit-content;
+    transition: color 0.2s ease-in;
+}
+
+.text-container h2:hover {
+    color: var(--CYAN);
+    cursor: pointer;
+}
+
+/* || HOVER STATE NAME */
+.profile-container .creators-name {
+    transition: color 0.2s ease-in;
+}
+
+.profile-container .creators-name:hover {
+    color: var(--CYAN);
+    cursor: pointer;
+}

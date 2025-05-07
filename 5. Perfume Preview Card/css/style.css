@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+/* || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+/* || ROOT */
+:root {
+
+    /* COLORS */
+    --GREEN-500: hsl(158, 36%, 37%);
+    --GREEN-700: hsl(158, 42%, 18%);
+
+    --BLACK: hsl(212, 21%, 14%);
+    --GRAY: hsl(228, 12%, 48%);
+    --CREAM: hsl(30, 38%, 92%);
+    --WHITE: hsl(0, 0%, 100%);
+
+    /* FONT WEIGHTS */
+    --FONT-WEIGHT-500: 500;
+    --FONT-WEIGHT-700: 700;
+
+}
+
+/* || SKELET */
+body {
+    min-height: 100vh;
+    font: 1rem "Montserrat", sans-serif;
+    background-color: var(--CREAM);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Fraunces", sans-serif;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* || CARD */
+.card {
+    width: min(calc(100% - 2rem));
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.no-image-container {
+    height: 100%;
+    padding: 1.5rem;
+    background-color: var(--WHITE);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+}
+
+/* || TEXT */
+.text-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
+.tag-title {
+    font-size: 12px;
+    color: var(--GRAY);
+    font-weight: var(--FONT-WEIGHT-500);
+    letter-spacing: 0.3rem;
+}
+
+.title {
+    color: var(--BLACK);
+    line-height: 1;
+}
+
+.information-text {
+    color: var(--GRAY);
+    font-weight: var(--FONT-WEIGHT-500);
+    line-height: 1.6;
+}
+
+/* || PRICE */
+.price-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 18px;
+}
+
+.new-price {
+    color: var(--GREEN-500);
+}
+
+.old-price {
+    color: var(--GRAY);
+    font-weight: var(--FONT-WEIGHT-500);
+}
+
+/* || BUTTON */
+.button {
+    font-family: "Montserrat", sans-serif;
+    color: var(--WHITE);
+    border: none;
+    background-color: var(--GREEN-500);
+    border-radius: 10px;
+    padding: 0.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 10px;
+}
+
+.button-text {
+    font-size: 0.9rem;
+    font-weight: var(--FONT-WEIGHT-500);
+}
+
+/* || MEDIA QUERY SMALL */
+@media screen and (min-width: 576px) {
+    .card {
+        width: 70%;
+    }
+}
+
+/* || MEDIA QUERY MEDIUM */
+@media screen and (min-width: 768px) {
+    .card {
+        flex-flow: row nowrap;
+        max-width: 570px;
+        height: 450px;
+    }
+
+    .image-container {
+        content: url('../images/image-product-desktop.jpg');
+        width: 50%;
+        height: 100%;
+    }
+
+    .image-container img {
+        height: 100%;
+    }
+
+    .no-image-container {
+        height: 100%;
+        width: 50%;
+        padding: 2rem;
+    }
+}
