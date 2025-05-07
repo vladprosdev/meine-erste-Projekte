@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+/* || RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+/* || VARIABLES */
+:root {
+    /* COLORS */
+    --BRIGHT-ORANGE: hsl(31, 77%, 52%);
+    --DARK-CYAN: hsl(184, 100%, 22%);
+    --VERY-DARK-CYAN: hsl(179, 100%, 13%);
+
+    --TRANSPARENT-WHITE: hsla(0, 0%, 100%, 0.75);
+    --VERY-LIGHT-GRAY: hsl(0, 0%, 95%);
+
+    /* FONTS */
+    --FF-BODY: "Lexend Deca", sans-serif;
+    --FF-HEADING: "Big Shoulders", sans-serif;
+    --FW-BODY: 400;
+    --FW-HEADING: 500;
+}
+
+body {
+    min-height: 100dvh;
+    font-family: var(--FF-BODY);
+    font-size: 15px;
+    font-weight: var(--FW-BODY);
+    display: flex;
+    flex-flow: row wrap;
+    color: var(--TRANSPARENT-WHITE);
+    justify-content: center;
+    align-items: center;
+    background-color: var(--VERY-LIGHT-GRAY);
+    margin: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: var(--FF-HEADING);
+    font-weight: var(--FW-HEADING);
+    color: var(--VERY-LIGHT-GRAY);
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* || CARD */
+.card {
+    max-width: 400px;
+    height: 100%;
+    background-color: gray;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+img {
+    width: 60px;
+}
+
+.sedans-container,
+.suvs-container,
+.luxury-container {
+    width: 100%;
+    height: 33.33%;
+    padding: 2.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.sedans-container {
+    background-color: var(--BRIGHT-ORANGE);
+}
+
+.suvs-container {
+    background-color: var(--DARK-CYAN);
+}
+
+.luxury-container {
+    background-color: var(--VERY-DARK-CYAN);
+}
+
+button {
+    width: fit-content;
+    font-family: var(--FF-BODY);
+    background-color: var(--VERY-LIGHT-GRAY);
+    border: 2px solid hsla(0, 0%, 100%, 0);
+    border-radius: 50rem;
+    padding: 1rem 2rem;
+    transition: color 0.5s ease;
+}
+
+.sedans-container button {
+    color: var(--BRIGHT-ORANGE);
+}
+
+.suvs-container button {
+    color: var(--DARK-CYAN);
+}
+
+.luxury-container button {
+    color: var(--VERY-DARK-CYAN);
+}
+
+@media screen and (min-width: 800px) {
+    .card {
+        max-width: 800px;
+        flex-flow: row nowrap;
+    }
+
+    .sedans-container,
+    .suvs-container,
+    .luxury-container {
+        width: 33.33%;
+        height: 100%;
+    }
+
+    button {
+        margin-top: 3rem
+    }
+}
+
+/* || HOVER */
+button:hover {
+    color: var(--VERY-LIGHT-GRAY);
+    background-color: hsla(0, 0%, 100%, 0);
+    border: 2px solid var(--VERY-LIGHT-GRAY);
+    cursor: pointer;
+}
