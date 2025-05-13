@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+:root {
+
+    --light-blue: hsl(225, 100%, 94%);
+    --blue: hsl(245, 75%, 52%);
+    --very-light-blue: hsl(225, 100%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --gray-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --font-family: "Red Hat Display", sans-serif;
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+    --font-weight-900: 900;
+
+}
+
+html {
+    font-family: var(--font-family);
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--light-blue);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-size: cover;
+    background-position: top right;
+    font-weight: var(--font-weight-500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: var(--font-weight-900);
+    color: var(--dark-blue);
+}
+
+h5 {
+    font-size: 15px;
+    font-weight: var(--font-weight-900);
+    color: var(--dark-blue);
+}
+
+p {
+    font-size: 16px;
+    color: var(--gray-blue);
+}
+
+.card {
+    width: clamp(250px, calc(100% - 4rem), 380px);
+    background-color: var(--white);
+    border-radius: 17px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: clip;
+}
+
+.content-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: calc(20px + 1vw) calc(20px + 1vw) calc(5px + 1vw);
+}
+
+.text-container h1 {
+    margin-bottom: 16px;
+}
+
+.text-container p {
+    line-height: 1.6;
+}
+
+.subscription-container {
+    width: 100%;
+    background-color: var(--very-light-blue);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    column-gap: 1rem;
+    grid-template-areas: "icon plan button" "icon price button";
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.icon-container {
+    width: 45px;
+    grid-area: icon;
+}
+
+.plan-name {
+    grid-area: plan;
+    text-align: left;
+}
+
+.price {
+    font-size: 14px;
+    grid-area: price;
+    text-align: left;
+}
+
+.change-button {
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: var(--font-weight-700);
+    justify-self: right;
+    grid-area: button;
+    transition: opacity 0.1s ease-in, transform 0.3s ease;
+}
+
+
+.buttons-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+}
+
+.button {
+    font-size: 15px;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.payment-button {
+    font-weight: var(--font-weight-700);
+    background-color: var(--blue);
+    color: var(--white);
+    box-shadow: 0 15px 20px hsla(245, 75%, 52%, 0.25);
+    transition: opacity 0.1s ease-in, transform 0.3s ease;
+}
+
+.cancel-button {
+    width: fit-content;
+    margin: 0 auto;
+    background-color: transparent;
+    font-weight: var(--font-weight-900);
+    color: var(--gray-blue);
+    transition: opacity 0.2s ease-in, transform 0.4s ease-out;
+}
+
+:is(.change-button, .payment-button):hover {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+.cancel-button:hover {
+    transform: scale(1.05);
+    color: black;
+}
+
+@media (width > 900px) {
+    body {
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
