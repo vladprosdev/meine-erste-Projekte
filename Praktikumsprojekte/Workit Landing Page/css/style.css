@@ -1,0 +1,179 @@
+/* CSS Import */
+
+@import 'tailwind/css';
+@import url(../css/fonts.css);
+@import url(../css/variables.css);
+@import url(../css/utility-classes.css);
+
+/* Reset */
+
+* {
+    position: relative;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+    z-index: 5;
+}
+
+button {
+    width: fit-content;
+    font-family: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* General Styles */
+
+body {
+    min-height: 100vh;
+}
+
+.button__primary {
+    padding: var(--spacing-12) var(--spacing-32);
+}
+
+.button__secondary::after,
+.hero__title span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--green);
+}
+
+/* Hero */
+
+.hero::before {
+    content: '';
+    background-image: url(../starter-code/assets/images/bg-pattern-1.svg);
+    position: absolute;
+    top: 50px;
+    left: -200px;
+    width: 341px;
+    height: 317px;
+}
+
+.hero::after {
+    content: '';
+    background-image: url(../starter-code/assets/images/bg-pattern-2.svg);
+    position: absolute;
+    bottom: 200px;
+    right: -70px;
+    width: 174px;
+    height: 181px;
+}
+
+.header__content {
+    padding: var(--spacing-32) var(--spacing-20) 0;
+}
+
+.hero__content {
+    padding: var(--spacing-56) var(--spacing-44) var(--spacing-64);
+}
+
+.hero__title {
+    margin-bottom: var(--spacing-40);
+}
+
+.hero__title span::after {
+    bottom: 2px;
+}
+
+.hero__image {
+    position: relative;
+    justify-self: center;
+}
+
+.end-rounder {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 150px;
+    background-color: var(--purple-100);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.end-rounder::after {
+    content: '';
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    height: 150px;
+    background-color: var(--purple-900);
+    clip-path: ellipse(70% 150px at 50% 0)
+}
+
+/* Value */
+
+.value {
+    padding: var(--spacing-64) var(--spacing-20);
+}
+
+.value__list {
+    gap: var(--spacing-32);
+}
+
+.value__list-item {
+    display: grid;
+    justify-items: center;
+}
+
+.number {
+    width: 48px;
+    aspect-ratio: 1 / 1;
+    color: var(--purple-900);
+    font-size: var(--fs-20);
+    border: 1px solid var(--purple-500);
+    border-radius: 100%;
+    margin-bottom: var(--spacing-24);
+}
+
+.value__list-item-title {
+    margin-bottom: var(--spacing-16);
+}
+
+/* CTA */
+
+.cta {
+    padding: var(--spacing-112) var(--spacing-20) 0;
+}
+
+.cta__content {
+    height: min-content;
+}
+
+.cta__text-and-button {
+    padding: var(--spacing-32);
+    gap: var(--spacing-32);
+    transform: translateY(-2rem);
+    margin-bottom: -2rem;
+    z-index: 5;
+}
+
+/* Footer */
+
+.footer {
+    padding: var(--spacing-80);
+}
+
+.footer .logo {
+    margin-bottom: var(--spacing-56);
+}
+
+.socials {
+    gap: var(--spacing-28);
+}
