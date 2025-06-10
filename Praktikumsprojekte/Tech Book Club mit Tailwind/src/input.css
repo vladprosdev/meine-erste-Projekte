@@ -1,0 +1,38 @@
+/* Fonts */
+
+/* Inter */
+
+@font-face {
+    font-family: 'Inter Regular';
+    src: url(../assets/fonts/inter/static/Inter_18pt-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Inter Semi Bold';
+    src: url(../assets/fonts/inter/static/Inter_18pt-SemiBold.ttf);
+}
+
+/* Martian Mono */
+
+@font-face {
+    font-family: 'Martian Mono Regular';
+    src: url(../assets/fonts/martian-mono/static/MartianMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Martian Mono Semi Bold';
+    src: url(../assets/fonts/martian-mono/static/MartianMono-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Martian Mono Bold';
+    src: url(../assets/fonts/martian-mono/static/MartianMono-Bold.ttf);
+}
+
+/* Tailwind */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero__content {}

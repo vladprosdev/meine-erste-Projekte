@@ -134,7 +134,7 @@ section {
 /* Value */
 
 .value {
-    padding: var(--spacing-64) var(--spacing-20);
+    padding: var(--spacing-64) var(--spacing-20) var(--spacing-128);
 }
 
 .value__list {
