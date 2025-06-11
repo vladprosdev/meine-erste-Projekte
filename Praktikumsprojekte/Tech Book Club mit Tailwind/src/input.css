@@ -35,4 +35,26 @@
 @tailwind components;
 @tailwind utilities;
 
-.hero__content {}
+@layer components {
+    .circle {
+        position: relative;
+    }
+
+    .circle::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -15px;
+        width: 130%;
+        aspect-ratio: 1 / 1;
+        background-image: url(../assets/images/pattern-circle.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+/* @layer utilities {
+    section {
+        @apply sm: px-4 md:px-8;
+    }
+} */

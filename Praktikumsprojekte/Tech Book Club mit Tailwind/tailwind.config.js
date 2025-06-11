@@ -6,6 +6,11 @@
    ],
    theme: {
      extend: {
+       screens: {
+         'sm': '0',
+         'md': '572px',
+         'lg': '1100px',
+       },
        fontFamily: {
          'inter-regular': ['Inter Regular', 'sans-serif'],
          'inter-bold': ['Inter Semi Bold', 'sans-serif'],
@@ -31,28 +36,16 @@
          },
        },
        fontSize: {
-         'preset-1': ['3.875rem', {
+         'preset-1': ['clamp(2.375rem, 8vw, 3.875rem)', {
            lineHeight: '1.2',
            letterSpacing: '-0.125rem',
          }],
-         'preset-1-mobile': ['2.375rem', {
-           lineHeight: '1.2',
-           letterSpacing: '-0.125rem',
-         }],
-         'preset-2': ['3.125rem', {
+         'preset-2': ['clamp(2.125rem, 6vw, 3.125rem)', {
            lineHeight: '1.3',
            letterSpacing: '-0.125rem',
          }],
-         'preset-2-mobile': ['2.125rem', {
+         'preset-3': ['clamp(1.5rem, 8vw, 2.125rem)', {
            lineHeight: '1.3',
-           letterSpacing: '-0.125rem',
-         }],
-         'preset-3': ['2.125rem', {
-           lineHeight: '1.3',
-           letterSpacing: '-0.0625rem',
-         }],
-         'preset-3-mobile': ['1.5rem', {
-           lineHeight: '1.1',
            letterSpacing: '-0.0625rem',
          }],
          'preset-4': ['1.5rem', {
@@ -63,11 +56,7 @@
            lineHeight: '1.4',
            letterSpacing: '-0.0313rem',
          }],
-         'preset-6': ['1.125rem', {
-           lineHeight: '1.3',
-           letterSpacing: '-0.0625rem',
-         }],
-         'preset-6-mobile': ['1rem', {
+         'preset-6': ['clamp(1rem, 2vw, 1.125rem)', {
            lineHeight: '1.3',
            letterSpacing: '-0.0625rem',
          }],
@@ -79,8 +68,19 @@
        backgroundImage: {
          'pattern-light': "url('../assets/images/pattern-light-bg.svg')",
          'pattern-dark': "url('../assets/images/pattern-dark-bg.svg')",
-       }
+       },
+       listStyleImage: {
+         check: 'url("../assets/images/icon-check.svg")',
+       },
+       gridTemplateAreas: {
+         'review-layout': [
+           'avatars stars',
+           'avatars text',
+         ],
+       },
      },
    },
-   plugins: [],
+   plugins: [
+     require('@savvywombat/tailwindcss-grid-areas'),
+   ],
  }
