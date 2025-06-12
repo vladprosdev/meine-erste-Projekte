@@ -35,7 +35,57 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+
+    h1,
+    h2,
+    h3,
+    p {
+        max-width: 40ch;
+    }
+
+    button {
+        cursor: pointer;
+    }
+}
+
 @layer components {
+
+    .hover-light,
+    .hover-dark {
+        background-image: linear-gradient(90deg, #ffd3ba 0%, #FFF5EF 100%);
+        background-repeat: no-repeat;
+        background-position: -400px;
+        transition: background-position 0.3s ease;
+    }
+
+    .hover-dark {
+        background-image: linear-gradient(90deg, #ffffff40 0%, transparent 100%);
+    }
+
+    .hover-light:hover,
+    .hover-dark:hover {
+        background-position: 0;
+    }
+
+    .hover-light:focus {
+        background-position: 0;
+        @apply transition-none outline-1 outline-neutral-700 outline-offset-4;
+    }
+
+    .hover-dark:focus {
+        background-position: 0;
+        @apply transition-none outline-1 outline-neutral outline-offset-4;
+    }
+
+    .hover-social {
+        transition: transform 0.5s ease;
+    }
+
+    .hover-social:focus {
+        @apply outline-none -translate-y-2;
+    }
+
     .circle {
         position: relative;
     }
@@ -51,10 +101,31 @@
         background-repeat: no-repeat;
         background-size: contain;
     }
-}
 
-/* @layer utilities {
-    section {
-        @apply sm: px-4 md:px-8;
+    .glow {
+        @apply relative overflow-clip z-10;
     }
-} */
+
+    .glow::after {
+        content: '';
+        @apply bg-pattern-glow bg-no-repeat bg-cover absolute -bottom-72 -right-72 w-[70%] aspect-square -z-10;
+    }
+
+    .abo-glow {
+        @apply relative overflow-clip z-10;
+    }
+
+    .abo-glow::after {
+        content: '';
+        @apply bg-pattern-glow bg-no-repeat bg-cover absolute top-0 left-0 w-[200%] aspect-square -z-10;
+    }
+
+    .arrow {
+        @apply relative;
+    }
+
+    .arrow::before {
+        content: '';
+        @apply absolute bg-pattern-arrow bg-no-repeat inset-0 left-24;
+    }
+}

@@ -8,8 +8,8 @@
      extend: {
        screens: {
          'sm': '0',
-         'md': '572px',
-         'lg': '1100px',
+         'md': '700px',
+         'lg': '1050px',
        },
        fontFamily: {
          'inter-regular': ['Inter Regular', 'sans-serif'],
@@ -68,11 +68,16 @@
        backgroundImage: {
          'pattern-light': "url('../assets/images/pattern-light-bg.svg')",
          'pattern-dark': "url('../assets/images/pattern-dark-bg.svg')",
+         'pattern-glow': "url('../assets/images/pattern-glow.svg')",
+         'pattern-arrow': "url('../assets/images/pattern-arrow.svg')",
        },
        listStyleImage: {
          check: 'url("../assets/images/icon-check.svg")',
        },
        gridTemplateAreas: {
+         'section-layout': [
+           'content image',
+         ],
          'review-layout': [
            'avatars stars',
            'avatars text',
