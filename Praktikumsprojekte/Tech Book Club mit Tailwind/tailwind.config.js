@@ -10,6 +10,7 @@
          'sm': '0',
          'md': '700px',
          'lg': '1050px',
+         'xl': '1300px',
        },
        fontFamily: {
          'inter-regular': ['Inter Regular', 'sans-serif'],
@@ -82,6 +83,28 @@
            'avatars stars',
            'avatars text',
          ],
+       },
+       keyframes: {
+         'down-up': {
+           '0%, 100%': {
+             transform: 'translateY(0)'
+           },
+           '50%': {
+             transform: 'translateY(0.3125rem)'
+           },
+         },
+         'up-down': {
+           '0%, 100%': {
+             transform: 'translateY(0)'
+           },
+           '50%': {
+             transform: 'translateY(-0.3125rem)'
+           },
+         },
+       },
+       animation: {
+         'down-up': 'down-up 1.3s ease infinite',
+         'up-down': 'up-down 1.3s ease infinite',
        },
      },
    },

@@ -31,11 +31,11 @@
                     </p>
 
                     <button
-                        class="hover-light w-fit bg-light-salmon-50 border-2 border-neutral-900 rounded-lg px-6 py-5 flex items-center gap-6 mb-5">
+                        class="w-fit bg-light-salmon-50 border-2 border-neutral-900 rounded-lg px-6 py-5 flex items-center gap-6 mb-5 hover-button-light group">
                         <span class="font-martian-mono-semibold uppercase text-preset-6 text-neutral-900">Review
                             membership options
                         </span>
-                        <img src="../assets/images/icon-arrow-down.svg" alt="" class="">
+                        <img src="../assets/images/icon-arrow-down.svg" alt="" class="group-hover:animate-down-up">
                     </button>
 
                     <div class="review max-w-fit grid grid-areas-review-layout gap-x-3 gap-y-1">
@@ -64,8 +64,9 @@
         </section>
 
         <section class="read-together w-full px-4 bg-neutral sm:px-4 md:px-8 lg:px-20">
-            <div class="read-together__content flex sm:flex-col lg:flex-row-reverse lg:gap-20 lg:place-content-center">
-                <div class="testimonial lg:max-w-xl lg:w-1/2">
+            <div
+                class="read-together__content flex sm:flex-col lg:flex-row-reverse lg:gap-20 lg:items-center lg:place-content-center">
+                <div class="testimonial place-content-center lg:max-w-xl lg:w-1/2">
                     <h2 class="text-preset-2 max-w-lg font-martian-mono-semibold text-neutral-900 sm:mb-6 md:mb-8">Read
                         together,
                         grow
@@ -120,13 +121,15 @@
 
         <section class="reading-journey relative rounded-xl overflow-clip sm:mx-4 md:mx-8 lg:mx-32 bg-neutral-100 glow">
             <div
-                class="reading-journey__content sm:px-4 sm:py-16 md:px-8 md:py-20 lg:px-16 bg-pattern-light overflow-clip">
-                <h2 class="text-preset-2 font-martian-mono-semibold text-neutral-900 sm:mb-8 md:mb-12 lg:text-center">
+                class="reading-journey__content max-w-7xl sm:px-4 sm:py-16 md:px-8 md:py-20 lg:px-16 bg-pattern-light overflow-clip">
+                <h2
+                    class="text-preset-2 font-martian-mono-semibold text-neutral-900 sm:mb-8 md:mb-12 lg:mb-16 lg:text-center">
                     Your tech <span class="lg:block">reading
                         journey</span>
                 </h2>
                 <ol class="flex sm:flex-col sm:gap-8 md:gap-10 lg:flex-row lg:gap-0">
-                    <li class="text-preset-6 font-martian-mono-semibold text-neutral-900 lg:arrow lg:pr-20">
+                    <li
+                        class="text-preset-6 font-martian-mono-semibold text-neutral-900 lg:arrow lg:pr-20 lg:max-w-xs xl:before:left-36">
                         <div
                             class="w-8 h-8 border-2 border-neutral-900 rounded-[4px] flex justify-center items-center sm:mb-5 md:mb-6">
                             1
@@ -134,7 +137,8 @@
                         Choose your membership tier
                     </li>
 
-                    <li class="text-preset-6 font-martian-mono-semibold text-neutral-900 lg:arrow lg:pr-20">
+                    <li
+                        class="text-preset-6 font-martian-mono-semibold text-neutral-900 lg:arrow lg:pr-20 xl:before:left-36">
                         <div
                             class="w-8 h-8 border-2 border-neutral-900 rounded-[4px] flex justify-center items-center sm:mb-5 md:mb-6">
                             2
@@ -143,7 +147,8 @@
                         book selection
                     </li>
 
-                    <li class="text-preset-6 font-martian-mono-semibold text-neutral-900 lg:arrow lg:pr-20">
+                    <li
+                        class="text-preset-6 font-martian-mono-semibold text-neutral-900 lg:arrow lg:pr-20 xl:before:left-36">
                         <div
                             class="w-8 h-8 border-2 border-neutral-900 rounded-[4px] flex justify-center items-center sm:mb-5 md:mb-6">
                             3
@@ -196,7 +201,7 @@
                         </ul>
 
                         <button href=""
-                            class="hover-light w-full bg-light-salmon-50 border-2 border-neutral-900 rounded-lg px-6 py-5 flex justify-center items-center">
+                            class="hover-button-light w-full bg-light-salmon-50 border-2 border-neutral-900 rounded-lg px-6 py-5 flex justify-center items-center">
                             <span class="font-martian-mono-semibold uppercase text-preset-6 text-neutral-900">Subscribe
                                 now</span>
                         </button>
@@ -225,7 +230,7 @@
                         </ul>
 
                         <button href=""
-                            class="hover-light w-full bg-light-salmon-50 border-2 border-neutral-900 rounded-lg px-6 py-5 flex justify-center items-center">
+                            class="hover-button-light w-full bg-light-salmon-50 border-2 border-neutral-900 rounded-lg px-6 py-5 flex justify-center items-center">
                             <span class="font-martian-mono-semibold uppercase text-preset-6 text-neutral-900">Subscribe
                                 now</span>
                         </button>
@@ -254,7 +259,7 @@
                         </ul>
 
                         <button href=""
-                            class="hover-light w-full bg-light-salmon-50 border-2 border-neutral-900 rounded-lg px-6 py-5 flex justify-center items-center"><span
+                            class="hover-button-light w-full bg-light-salmon-50 border-2 border-neutral-900 rounded-lg px-6 py-5 flex justify-center items-center"><span
                                 class="font-martian-mono-semibold uppercase text-preset-6 text-neutral-900">Talk to
                                 us</span></button>
                     </div>
@@ -292,11 +297,12 @@
                 </h2>
 
                 <button
-                    class="hover-dark justify-self-center w-fit max-w-md bg-transparent border-2 border-neutral rounded-lg flex items-center px-6 py-5 mb-6">
+                    class="justify-self-center w-fit max-w-md bg-transparent border-2 border-neutral rounded-lg flex items-center px-6 py-5 mb-6 hover-button-dark group">
                     <span class="font-martian-mono-semibold uppercase text-preset-6 text-neutral">Review
                         membership options
                     </span>
-                    <img src="../assets/images/icon-arrow-up.svg" alt="" class="ml-6">
+                    <img src="../assets/images/icon-arrow-up.svg" alt=""
+                        class="arrow-up ml-6 group-hover:animate-up-down">
                 </button>
 
                 <div class="review max-w-fit grid grid-areas-review-layout gap-x-3 gap-y-1 mb-16">
@@ -325,11 +331,11 @@
 
                     <div class="flex justify-center items-center gap-6">
                         <button class="hover-social">
-                            <img src="../assets/images/logo-bluesky.svg" alt="" class="">
+                            <img src="../assets/images/logo-bluesky.svg" alt="" class="" width="22" height="23">
                         </button>
 
                         <button class="hover-social">
-                            <img src="../assets/images/logo-linkedin.svg" alt="" class="">
+                            <img src="../assets/images/logo-linkedin.svg" alt="" class="" width="22" height="23">
                         </button>
                     </div>
                 </div>
