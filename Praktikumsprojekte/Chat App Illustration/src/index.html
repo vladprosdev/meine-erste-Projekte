@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="font-rubik">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App Illustration</title>
+  <link rel="stylesheet" href="../src/output.css">
+</head>
+
+<body class="min-h-screen bg-color-white sm:px-8 sm:py-16">
+
+
+
+  <div class="content flex justify-center items-center">
+    <div
+      class="phone relative bg-clr-white w-[15.4375rem] h-[31.5625rem] shadow-xl rounded-3xl border-2 border-b-clr-heading p-[0.625rem]">
+      <div class="phone__content bg-clr-chat-bg rounded-[inherit]">
+
+        <!-- NAV START -->
+        <div
+          class="nav bg-gradient-to-bl from-clr-gradient-1 to-clr-gradient-2 rounded-t-[inherit] rounded-b-lg px-4 pt-[1.875rem] pb-3 m-[0.0625rem]">
+          <div class="nav__content flex justify-between items-center">
+            <div class="nav__left flex gap-2">
+              <img src="../assets/images/back-icon.svg" class="back-icon">
+
+              <div class="contact flex items-center gap-2">
+                <img src="../assets/images/avatar.jpg" alt="Samuel Green"
+                  class="w-6 h-6 rounded-full border-[1px] border-clr-white">
+
+                <div class="contact-info">
+                  <h4 class="name text-fs-name font-fw-500 text-clr-white">Samuel Green</h4>
+                  <p class="status text-fs-status font-fw-400 text-clr-status">Available to Walk</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav__right">
+              <img src="../assets/images/settings-icon.svg" class="settings-icon">
+            </div>
+
+          </div>
+        </div>
+        <!-- NAV END -->
+
+        <!-- CHAT START -->
+        <div class="chat px-2 py-3">
+          <div class="chat__content flex flex-col gap-4">
+            <div class="two-left-messages flex flex-col gap-2">
+              <div class="left-message max-w-32 bg-clr-chat-left-bg px-2 py-[0.375rem] rounded-xl rounded-bl-[0.25rem]">
+                <p class="text-fs-chat font-fw-400 text-clr-chat-left">That sounds great. I’d be happy to discuss more.
+                </p>
+              </div>
+
+              <div class="left-message max-w-32 bg-clr-chat-left-bg px-2 py-[0.375rem] rounded-xl rounded-bl-[0.25rem]">
+                <p class="text-fs-chat font-fw-400 text-clr-chat-left">Could you send over some pictures of your dog,
+                  please?</p>
+              </div>
+            </div>
+
+            <div class="right-messages self-end flex flex-col items-end gap-2">
+              <div class="photos flex gap-2">
+                <img class="w-10 aspect-square rounded-xl" src="../assets/images/dog-image-1.jpg"
+                  alt="Dog smiling with tongue">
+                <img class="w-10 aspect-square rounded-xl" src="../assets/images/dog-image-2.jpg"
+                  alt="Dog laying on the ground">
+                <img class="w-10 aspect-square rounded-xl" src="../assets/images/dog-image-3.jpg"
+                  alt="Dog grabbed a stick">
+              </div>
+
+              <div
+                class="right-message left-message max-w-32 bg-clr-white px-2 py-[0.375rem] rounded-xl rounded-br-[4px]">
+                <p class="text-fs-chat font-fw-400 text-clr-chat-right">Here are a few pictures. She’s a happy girl!</p>
+              </div>
+
+              <div
+                class="right-message left-message max-w-32 bg-clr-white px-2 py-[0.375rem] rounded-xl rounded-br-[4px]">
+                <p class="text-fs-chat font-fw-400 text-clr-chat-right">Can you make it?</p>
+              </div>
+            </div>
+
+            <div class="left-proposition">
+              <div class="left-message max-w-32 bg-clr-chat-left-bg px-2 py-[0.375rem] rounded-xl rounded-bl-[0.25rem]">
+                <p class="text-fs-chat font-fw-400 text-clr-chat-left">She looks so happy! The time we discussed works.
+                  How long shall I take her out for?</p>
+              </div>
+
+              <fieldset
+                class="flex items-center option-1 max-w-32 bg-clr-chat-left-bg px-2 py-[0.375rem] rounded-xl rounded-bl-[0.25rem]">
+                <input type="radio" id="ThirtyMinutes" name="service" value="30-minute-walk">
+                <label for="30Minutes" class="text-fs-chat font-fw-400 text-clr-white">30 minute walk</label>
+                <p class="price text-fs-price font-fw-700 text-clr-white">$29</p>
+              </fieldset>
+
+              <fieldset
+                class="flex items-center option-2 max-w-32 bg-clr-chat-left-bg px-2 py-[0.375rem] rounded-xl rounded-bl-[0.25rem]">
+                <input type="radio" id="OneHour" name="service" value="30-minute-walk" class="">
+                <label for="OneHour" class="text-fs-chat font-fw-400 text-clr-white">1 hour walk</label>
+                <p class="price text-fs-price font-fw-700 text-clr-white">$49</p>
+              </fieldset>
+            </div>
+
+            <div class="type-bar">
+              <div class="type-bar__content">
+                <p>Type a message…</p>
+
+                <div class="submit-button">
+                  <div class="arrow-icon"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CHAT END -->
+
+        <!-- TESTIMONIAL START -->
+        <div class="testimonial">
+          <h1>Simple booking</h1>
+          <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to
+            discuss arrangements and make bookings. Once the walk has been completed you can rate
+            your walker and book again all through the chat.</p>
+        </div>
+        <!-- TESTIMONIAL END -->
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
