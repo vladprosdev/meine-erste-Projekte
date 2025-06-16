@@ -4,8 +4,9 @@
    theme: {
      screens: {
        'sm': '0px',
-       'md': '768px',
-       'lg': '1024px',
+       'md': '823px',
+       'lg': '1000px',
+       'xl': '1300px',
      },
      fontFamily: {
        rubik: ['Rubik, sans-serif'],
@@ -35,6 +36,7 @@
          'heading': 'hsl(271, 36%, 24%)',
          'paragraph': 'hsl(270, 7%, 64%)',
          'white': 'hsl(0, 0%, 100%)',
+         'black': 'hsl(0, 0%, 0%)',
          'submit-button-bg': 'hsl(271, 36%, 24%)',
          'radio-button-outline': 'hsl(289, 100%, 72%)',
          'gradient-1': 'hsl(289, 100%, 72%)',
